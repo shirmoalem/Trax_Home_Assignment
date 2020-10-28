@@ -22,5 +22,5 @@ An explanation about the routes:
 4)Route for finding a contact by name : http://localhost:3000/api/contacts/get-contact-by-name/Shir Moalem
 
 
-I was create an Array that contain 4 contacts that I chose. in Contacts I wrote my contacts array. in app.js there are the setting of the server.
+I was create an Array that contain 4 contacts that I chose. in Contacts.js I wrote my contacts array. in app.js there are the setting of the server.
 in route/api/contacts.js I wrote the routes that I was requested for the task.
