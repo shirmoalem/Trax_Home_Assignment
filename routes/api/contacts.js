@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 var contacts = require('../../Contacts');
 
+const nameFilter = contact => contact.fullName === req.params.id;
+
 // Hello message
 router.get('/whos-there', (req,res) => {
 
@@ -14,12 +16,11 @@ router.get('/get-all-contacts', (req,res) => res.json(contacts));
 // Gets contact by name
 router.get('/get-contact-by-name/:id', (req,res) => {
 
-    let reqName = req.params.id;
-    const found = contacts.some(contact => contact.fullName === reqName);// tests whether at least one element in the array passes the test
+    const found = contacts.some(nameFilter(req));// tests whether at least one element in the array passes the test
 
     if(found)
     {
-        res.json(contacts.filter(contact => contact.fullName === reqName));
+        res.json(contacts.filter(nameFilter(req));
     }
     else
     {
@@ -43,6 +44,5 @@ router.post('/add-new-contact' ,(req, res) => {
     contacts.push(newContact);
     res.json(contacts);
 });
-
+nameFilter
 module.exports = router;
-
