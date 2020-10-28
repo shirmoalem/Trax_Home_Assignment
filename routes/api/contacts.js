@@ -20,7 +20,7 @@ router.get('/get-contact-by-name/:id', (req,res) => {
 
     if(found)
     {
-        res.json(contacts.filter(nameFilter(req));
+        res.json(contacts.filter(nameFilter(req)));
     }
     else
     {
