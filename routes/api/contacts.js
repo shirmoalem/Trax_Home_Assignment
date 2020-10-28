@@ -35,7 +35,7 @@ router.post('/add-new-contact' ,(req, res) => {
         phone:    req.body.phone
     }
 
-    if(!newContact.fullName || !newContact.email || !newContact.phone)//check if all the detailes are sent in the req
+    if(!newContact.fullName || !newContact.email || !newContact.phone)//check if all the details were sent in the req
     {
         return res.status(400).json({message: 'Please include fullName, email and phone number'});// Error message
     }
